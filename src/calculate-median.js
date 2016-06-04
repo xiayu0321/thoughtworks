@@ -5,13 +5,13 @@ function calculate_median(arr) {
   var newArr = [];
   for(i = 0;i < arr.length;i++){
   	if((i + 1) % 2 === 0){
-  	    newArr[j++] = arr[i];   
+  	  j = newArr.push(arr[i]);   
   	}
   }  
   newArr.sort(function(a,b){
-    return a>b?1:-1});
+    return a - b});
 
-   var result = ((j - 1)% 2 === 0 ?newArr[j / 2] + newArr[j / 2  - 1]: newArr[j / 2]);
+   var result = (j % 2 === 0 ?(newArr[j / 2] + newArr[j / 2 -1])/2 : newArr[j / 2]);
 
    return result;
 }
