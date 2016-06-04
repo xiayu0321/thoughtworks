@@ -28,8 +28,8 @@ function calculate_median(arr) {
      newArr[i-1] = newArr[min];
      newArr[min] = tmp;  
     
-     tmp = newArr[n-i]; 
-     newArr[n-i] = newArr[max]; 
+     tmp = newArr[len-i]; 
+     newArr[len-i] = newArr[max]; 
      newArr[max] = tmp;   
   }
 
