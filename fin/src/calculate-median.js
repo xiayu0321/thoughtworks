@@ -5,16 +5,15 @@ function calculate_median(arr) {
   var len = 0;
   var max;
   var min;
-  var result = 0;
-  var newArr = new Array();
+  var newArr = [];
   for(i = 0;i < arr.length;i++){
-  	if((i + 1) % 2 == 0){
+  	if((i + 1) % 2 === 0){
   		newArr[j++] = arr[i];
   	}
   }  
   len = newArr.length;
 
-  for (var i = 1; i <= len / 2; i++) {
+  for (i = 1; i <= len / 2; i++) {
      min = 1;
      max = 1;
      for (j = j+1; j <= len - i; j++) {
@@ -34,13 +33,8 @@ function calculate_median(arr) {
      newArr[max] = tmp;   
   }
 
-  if(len % 2 == 0){
-  	result = newArr[len / 2] + newArr[len / 2  + 1];
-  }else{
-  	result = newArr[len / 2 + 1];
-  }
-}
-　　return result;
-}
+   var result = len % 2 === 0 ?newArr[len / 2] + newArr[len / 2  + 1]:result = newArr[len / 2 + 1];
 
+   return result;
+}
 module.exports = calculate_median;
