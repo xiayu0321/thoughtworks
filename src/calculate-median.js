@@ -3,8 +3,6 @@ function calculate_median(arr) {
   var i = 0;
   var j = 0;
   var len = 0;
-  var max;
-  var min;
   var newArr = [];
   for(i = 0;i < arr.length;i++){
   	if((i + 1) % 2 === 0){
@@ -13,26 +11,8 @@ function calculate_median(arr) {
   }  
   newArr[j] = 0;
   len = newArr.length;
-
-  for (i = 1; i <= len / 2; i++) {
-     min = 1;
-     max = 1;
-     for (j = j+1; j <= len - i; j++) {
-       if(newArr[j] > newArr[max]){
-          max = j;
-       }
-       if(newArr[j] < newArr[min]){
-            min = j;
-       }
-     }
-     var tmp = newArr[i - 1];
-     newArr[i-1] = newArr[min];
-     newArr[min] = tmp;  
-    
-     tmp = newArr[len-i]; 
-     newArr[len-i] = newArr[max]; 
-     newArr[max] = tmp;   
-  }
+  newArr.sort(function(a,b){
+    return a>b?1:-1});
 
    var result = len % 2 === 0 ?newArr[len / 2] + newArr[len / 2  + 1]:result = newArr[len / 2 + 1];
 
