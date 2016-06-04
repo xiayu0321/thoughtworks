@@ -8,9 +8,10 @@ function calculate_median(arr) {
   var newArr = [];
   for(i = 0;i < arr.length;i++){
   	if((i + 1) % 2 === 0){
-  		newArr[j++] = arr[i];
+  		newArr[j++] = arr[i];   
   	}
   }  
+  newArr[j] = '';
   len = newArr.length;
 
   for (i = 1; i <= len / 2; i++) {
