@@ -11,7 +11,7 @@ function calculate_median(arr) {
   		newArr[j++] = arr[i];   
   	}
   }  
-  newArr[j] = '';
+  newArr[j] = 0;
   len = newArr.length;
 
   for (i = 1; i <= len / 2; i++) {
