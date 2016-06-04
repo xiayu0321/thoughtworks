@@ -5,10 +5,9 @@ function calculate_median(arr) {
   var newArr = [];
   for(i = 0;i < arr.length;i++){
   	if((i + 1) % 2 === 0){
-  		newArr.push() = arr[i];   
+  	len = newArr.push(arr[i]);   
   	}
   }  
-  len = newArr.length;
   newArr.sort(function(a,b){
     return a>b?1:-1});
 
