@@ -11,7 +11,7 @@ function calculate_median(arr) {
   newArr.sort(function(a,b){
     return a - b});
 
-   var result = (j % 2 === 0 ?(newArr[j / 2] + newArr[j / 2 -1])/2 : newArr[j / 2]);
+   var result =(j%2 === 0 ?(newArr[j/2] + newArr[j/2-1])/2:newArr[(j-1)/2]);
 
    return result;
 }
